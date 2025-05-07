@@ -1,0 +1,21 @@
+// Cookie Consent
+const cookieButton = document.querySelector('.btn-cookie');
+
+window.onload = function() {
+  const cookieMessage = document.createElement('div');
+  cookieMessage.classList.add('cookie-message');
+  cookieMessage.innerHTML = `
+    <p>We use cookies to ensure a smooth browsing experience. By continuing we assume you accept the use of cookies. 
+    <button class="btn-cookie">Accept</button></p>
+  `;
+  document.body.appendChild(cookieMessage);
+  
+  cookieButton.addEventListener('click', function() {
+    cookieMessage.style.display = 'none';
+    localStorage.setItem('cookiesAccepted', 'true');
+  });
+  
+  if (localStorage.getItem('cookiesAccepted')) {
+    cookieMessage.style.display = 'none';
+  }
+};

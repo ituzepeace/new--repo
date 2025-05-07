@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Artsynergy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    .header {
+      background-color: #000;
+      padding: 20px 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .logo {
+      color: #fff;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      justify-content: flex-end;
+    }
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav a.active {
+      border-bottom: 2px solid #ff3366;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1400x500') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-form {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .btn {
+      background-color: #ff3366;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1em;
+    }
+    .btn:hover {
+      background-color: #e02a5b;
+    }
+
+    .footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 40px;
+    }
+    .btn-cookie {
+      background-color: #444;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .btn-cookie:hover {
+      background-color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="logo">Artsynergy</div>
+      <nav class="nav">
+        <ul>
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="events.html">Events</a>
+          <a href="services.html">Services</a>
+          <a href="#contact.html">Contact</a>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Reach out to us for inquiries, collaborations, or support.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-form">
+    <div class="container">
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>©2025 Artsynergy. All rights reserved.</p>
+      <button class="btn-cookie">Accept Cookies</button>
+    </div>
+  </footer>
+
+</body>
+</html>
