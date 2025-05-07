@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ArtSynergy | Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -11,37 +12,72 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #fff;
       color: #333;
-    
+      padding-top: 10px;
+
     }
+
     header {
-      background-color: #000;
+      background-color: transparent;
       color: white;
       padding: 20px;
       text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
     }
+
+    header.scrolled {
+      background-color: rgba(0, 0, 0, 0.9);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px 20px;
+    }
+
+    /* Animation classes for scroll effects */
+    .section,
+    .slideshow-container,
+    .cta {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .section.visible,
+    .slideshow-container.visible,
+    .cta.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: 600;
     }
+
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('print.jpg') no-repeat center center/cover;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('print.jpg') no-repeat center center/cover;
       color: white;
       text-align: center;
       background-attachment: fixed;
-
+      padding: 180px 40px 100px;
+      /* Added padding to account for fixed header */
+      margin-top: -20px;
+      /* Pulls the hero up to meet the header */
     }
-    
-    
+
+
     .hero h1 {
       font-size: 3em;
       margin-bottom: 20px;
     }
+
     .hero p {
       font-size: 1.3em;
       margin-bottom: 30px;
     }
+
     .hero a button {
       background-color: #ff3366;
       color: white;
@@ -51,29 +87,34 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .section {
       padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     .section h2 {
       font-size: 2em;
       margin-bottom: 20px;
       color: #222;
-      
+
     }
+
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
+
     .feature {
       background-color: #f9f9f9;
       padding: 25px;
       border-radius: 10px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
     }
+
     .feature img {
       width: 100%;
       max-height: 200px;
@@ -81,20 +122,24 @@
       border-radius: 10px;
       margin-bottom: 15px;
     }
+
     .feature h3 {
       color: #ff3366;
       margin-bottom: 10px;
     }
+
     .cta {
       background-color: #000;
       color: white;
       text-align: center;
       padding: 60px 20px;
     }
+
     .cta h2 {
       font-size: 2em;
       margin-bottom: 20px;
     }
+
     .cta a button {
       background-color: #ff3366;
       color: white;
@@ -104,6 +149,7 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     footer {
       background-color: #000;
       color: white;
@@ -111,15 +157,18 @@
       padding: 20px;
       font-size: 0.9em;
     }
+
     .slideshow-container {
       max-width: 1000px;
       position: relative;
       margin: auto;
     }
+
     .slide {
       display: none;
 
     }
+
     .slide img {
       width: 100%;
       border-radius: 100px;
@@ -127,6 +176,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h2>ArtSynergy</h2>
@@ -140,7 +190,6 @@
   </header>
 
   <section class="hero" id="home">
-    <img src= "print.jpg" style="padding: 50px; width: 60%; height: 90vh; " alt="print.jpg" height: 90px>
     <h1>Welcome to ArtSynergy</h1>
     <p>Where artists collaborate, grow, and thrive in synergy.</p>
     <a href="https://calendly.com/your-username" target="_blank">
@@ -149,7 +198,8 @@
   </section>
 
   <div class="slideshow-container">
-    <div class="slide"><img src="Aménager un atelier dans une chambre - Clem Around The Corner.jpg" alt="Aménager un atelier dans une chambre - Clem Around The Corner.jpg"></div>
+    <div class="slide"><img src="Aménager un atelier dans une chambre - Clem Around The Corner.jpg"
+        alt="Aménager un atelier dans une chambre - Clem Around The Corner.jpg"></div>
     <div class="slide"><img src="ilish.jpg" alt="ilish.jpg"></div>
     <div class="slide"><img src="workshop.jpg" alt="workshop.jpg"></div>
   </div>
@@ -158,12 +208,14 @@
     <h2>What We Offer</h2>
     <div class="features">
       <div class="feature">
-        <img src="_Newsprint Femme collage_ Poster for Sale by Quarkari.jpg" alt="_Newsprint Femme collage_ Poster for Sale by Quarkari.jpg">
+        <img src="_Newsprint Femme collage_ Poster for Sale by Quarkari.jpg"
+          alt="_Newsprint Femme collage_ Poster for Sale by Quarkari.jpg">
         <h3>Connect with Fellow Artists</h3>
         <p>Join a vibrant community where you can share ideas and collaborate on projects.</p>
       </div>
       <div class="feature">
-        <img src="Surrealism Drawing Ideas_ A Big Journey Beyond Reality 2024 62.jpg" alt="Surrealism Drawing Ideas_ A Big Journey Beyond Reality 2024 62.jpg">
+        <img src="Surrealism Drawing Ideas_ A Big Journey Beyond Reality 2024 62.jpg"
+          alt="Surrealism Drawing Ideas_ A Big Journey Beyond Reality 2024 62.jpg">
         <h3>Access Exclusive Workshops</h3>
         <p>Participate in expert-led workshops to enhance your skills and knowledge.</p>
       </div>
@@ -188,16 +240,64 @@
   </footer>
 
   <script>
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      const slides = document.getElementsByClassName("slide");
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+    // Handle header scroll effect
+  const header = document.querySelector('header');
+  
+  window.addEventListener('scroll', function() {
+    // Header effect
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1; }
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Change i
+    
+    // Scroll animations for sections
+    animateOnScroll();
+  });
+
+  // Initialize animations on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    animateOnScroll();
+  });
+
+  // Animation function
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.section, .slideshow-container, .cta');
+    const windowHeight = window.innerHeight;
+    const triggerPoint = windowHeight * 0.75;
+
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      
+      if (elementTop < triggerPoint) {
+        element.classList.add('visible');
+      }
+    });
+  }
+    // Handle header scroll effect
+    // window.addEventListener('scroll', function() {
+    //   const header = document.querySelector('header');
+    //   if (window.scrollY > 50) {
+    //     header.classList.add('scrolled');
+    //   } else {
+    //     header.classList.remove('scrolled');
+    //   }
+    // });
+  
+    // Fixed slideshow function
+    // let slideIndex = 0;
+    // showSlides();
+  
+    // function showSlides() {
+    //   const slides = document.getElementsByClassName("slide");
+    //   for (let i = 0; i < slides.length; i++) {
+    //     slides[i].style.display = "none";
+    //   }
+    //   slideIndex++;
+    //   if (slideIndex > slides.length) { slideIndex = 1; }
+    //   if (slides[slideIndex - 1]) {
+    //     slides[slideIndex - 1].style.display = "block";
+    //   }
+    //   setTimeout(showSlides, 3000);
+    // }
+  </script>
